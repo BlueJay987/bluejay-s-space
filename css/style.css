@@ -1,0 +1,155 @@
+:root {
+    --grey: #232627;
+    --darkgrey: #181a1b;
+    --blue: #2043F1;
+    --purple: #5B18CF;
+    --pink: #A1089B;
+    --darkpink: #360934;
+}
+
+body {
+    /*background-color: black;*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/bluejayback.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.divider {
+    border-color: var(--purple);
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    background-color: var(--purple);
+    padding: 1%;
+    font-family: monospace;
+}
+
+.title {
+    text-align: center;
+    color:  white;
+    font-family: monospace;
+    font-size: 2.5em;
+    background-color: var(--darkgrey);
+    padding: 0.7em;
+    margin-bottom: 15px;
+}
+
+.linkcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0% 15%;
+}
+
+div.link {
+    color: white;
+    background-color: var(--grey);
+    font-size: 2.5vw;
+    text-align: center;
+    padding: 1em;
+    margin: 15px;
+    width: 50%;
+    font-family: monospace;
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--pink);
+    border-radius: 1vw;
+    transition: 0.1s;
+}
+
+a.link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+
+.link:hover {
+    color: white;
+    font-size: 3.5vw;
+    border-color: var(--blue);
+    transition: 0.15s;
+}
+
+h1.bodytext {
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 2.5vw;
+}
+
+p.bodytext {
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 200%;
+    line-height: 1.5;
+}
+
+.projectcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0% 15%;
+}
+
+h3.project {
+    color: white;
+    text-align: center;
+    font-family: monospace;
+}
+
+
+div.project {
+    background-color: var(--purple);
+    font-size: 1.6vw;
+    text-align: center;
+    padding: 0.7em 0em;
+    margin: 15px;
+    width: 25%;
+    font-family: monospace;
+    cursor: pointer;
+    border-style: solid;
+    border-color: black;
+    transition: 0.1s;
+}
+
+div.project:hover {
+    background-color: #2043F1;
+    font-size: 1.9vw;
+    width: 30%;
+    transition: 0.1s;
+}
+
+a.project {
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    background-color: var(--grey);
+    padding: 0.5%;
+    font-family: monospace;
+    margin-top: 15px;
+    /*position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; */
+}
