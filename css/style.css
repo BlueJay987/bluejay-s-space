@@ -3,6 +3,7 @@
     --darkgrey: #181a1b;
     --blue: #2043F1;
     --purple: #5B18CF;
+    --lightpurple: #8448ea;
     --pink: #A1089B;
     --darkpink: #360934;
 }
@@ -15,12 +16,25 @@ body {
     background-attachment: fixed;
 }
 
-.divider {
+@keyframes divider {
+    0% {border-color: var(--purple);}
+    50% {border-color: var(--pink);}
+    100%{border-color: var(--purple);}
+}
+hr {
     border-color: var(--purple);
     border-style: dashed;
     border-width: 2px;
+    animation-name: divider;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
+@keyframes header {
+    0% {background-color: var(--purple);}
+    50% {background-color: var(--lightpurple);}
+    100%{background-color: var(--purple);}
+}
 .header {
     text-align: center;
     color: white;
@@ -28,6 +42,9 @@ body {
     background-color: var(--purple);
     padding: 1%;
     font-family: monospace;
+    animation-name: header;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .title {
@@ -80,11 +97,23 @@ a.link {
     transition: 0.15s;
 }
 
+@keyframes h1hover {
+    0% {transform: translate(0px, 0px);}
+    50% {transform: translate(0px, 50px);}
+    100% {transform: translate(0px, 0px);}
+}
 h1.bodytext {
     color: white;
     text-align: center;
     font-family: monospace;
-    font-size: 2.5vw;
+    font-size: 400%;
+    margin-bottom: 70px;
+    animation-name: h1hover;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+    text-shadow: 4px 3px  var(--pink);
+
 }
 
 p.bodytext {
@@ -93,6 +122,7 @@ p.bodytext {
     font-family: monospace;
     font-size: 200%;
     line-height: 1.5;
+    text-shadow: 3px 3px 2px var(--pink);
 }
 
 .projectcontainer {
@@ -114,9 +144,9 @@ h3.project {
 
 div.project {
     background-color: var(--purple);
-    font-size: 1.6vw;
+    font-size: 2vw;
     text-align: center;
-    padding: 0.7em 0em;
+    padding: 0.7em 0.1em;
     margin: 15px;
     width: 25%;
     font-family: monospace;
@@ -128,8 +158,9 @@ div.project {
 
 div.project:hover {
     background-color: #2043F1;
-    font-size: 1.9vw;
+    font-size: 2.3vw;
     width: 30%;
+    transform: skewX(-10deg);
     transition: 0.1s;
 }
 
